@@ -223,7 +223,7 @@ const Contact: React.FC<ContactProps> = () => {
                                 <sub>
                                     {!isFormValid ? (
                                         <span>
-                                            <b style={styles.star}>*</b> =
+                                            <b style={styles.star}>*</b> 
                                             required
                                         </span>
                                     ) : (
