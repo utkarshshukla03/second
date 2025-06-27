@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import colors from '../../constants/colors';
-import twitterIcon from '../../assets/pictures/contact-twitter.png';
+import leetcode from '../../assets/pictures/contact-leetcode.png';
 import ghIcon from '../../assets/pictures/contact-gh.png';
 import inIcon from '../../assets/pictures/contact-in.png';
 import ResumeDownload from './ResumeDownload';
@@ -9,10 +9,11 @@ export interface ContactProps {}
 
 // function to validate email
 const validateEmail = (email: string) => {
+    if (typeof email !== 'string') return false;
     const re =
         // eslint-disable-next-line
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    return re.test(email.toLowerCase());
 };
 
 interface SocialBoxProps {
@@ -20,17 +21,15 @@ interface SocialBoxProps {
     link: string;
 }
 
-const SocialBox: React.FC<SocialBoxProps> = ({ link, icon }) => {
-    return (
-        <a rel="noreferrer" target="_blank" href={link}>
-            <div className="big-button-container" style={styles.social}>
-                <img src={icon} alt="" style={styles.socialImage} />
-            </div>
-        </a>
-    );
-};
+const SocialBox: React.FC<SocialBoxProps> = ({ link, icon }) => (
+    <a rel="noreferrer" target="_blank" href={link}>
+        <div className="big-button-container" style={styles.social}>
+            <img src={icon} alt="" style={styles.socialImage} />
+        </div>
+    </a>
+);
 
-const Contact: React.FC<ContactProps> = (props) => {
+const Contact: React.FC<ContactProps> = () => {
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -41,7 +40,11 @@ const Contact: React.FC<ContactProps> = (props) => {
     const [formMessageColor, setFormMessageColor] = useState('');
 
     useEffect(() => {
-        if (validateEmail(email) && name.length > 0 && message.length > 0) {
+        if (
+            validateEmail(email) &&
+            typeof name === 'string' && name.trim().length > 0 &&
+            typeof message === 'string' && message.trim().length > 0
+        ) {
             setIsFormValid(true);
         } else {
             setIsFormValid(false);
@@ -56,28 +59,19 @@ const Contact: React.FC<ContactProps> = (props) => {
         }
         try {
             setIsLoading(true);
-            const res = await fetch(
-                'https://api.henryheffernan.com/api/contact',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        company,
-                        email,
-                        name,
-                        message,
-                    }),
-                }
-            );
-            // the response will be either {success: true} or {success: false, error: message}
-            const data = (await res.json()) as
-                | {
-                      success: false;
-                      error: string;
-                  }
-                | { success: true };
+            const res = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    company,
+                    email,
+                    name,
+                    message,
+                }),
+            });
+            const data = await res.json();
             if (data.success) {
                 setFormMessage(`Message successfully sent. Thank you ${name}!`);
                 setCompany('');
@@ -85,27 +79,25 @@ const Contact: React.FC<ContactProps> = (props) => {
                 setName('');
                 setMessage('');
                 setFormMessageColor(colors.blue);
-                setIsLoading(false);
             } else {
-                setFormMessage(data.error);
+                setFormMessage(data.error || 'Failed to send message.');
                 setFormMessageColor(colors.red);
-                setIsLoading(false);
             }
         } catch (e) {
-            setFormMessage(
-                'There was an error sending your message. Please try again.'
-            );
+            setFormMessage('There was an error sending your message. Please try again.');
             setFormMessageColor(colors.red);
+        } finally {
             setIsLoading(false);
         }
     }
 
     useEffect(() => {
         if (formMessage.length > 0) {
-            setTimeout(() => {
+            const timeout = setTimeout(() => {
                 setFormMessage('');
                 setFormMessageColor('');
             }, 4000);
+            return () => clearTimeout(timeout);
         }
     }, [formMessage]);
 
@@ -116,30 +108,29 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <div style={styles.socials}>
                     <SocialBox
                         icon={ghIcon}
-                        link={'https://github.com/henryjeff'}
+                        link={'https://github.com/utkarshshukla03'}
                     />
                     <SocialBox
                         icon={inIcon}
-                        link={'https://www.linkedin.com/in/henryheffernan/'}
+                        link={'https://www.linkedin.com/in/utkarsh-shukla-7643ab276/'}
                     />
                     <SocialBox
-                        icon={twitterIcon}
-                        link={'https://twitter.com/henryheffernan'}
+                        icon={leetcode}
+                        link={'https://leetcode.com/u/utkarshshukla372/'}
                     />
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    I am currently employed, however if you have any
-                    opportunities, feel free to reach out - I would love to
-                    chat! You can reach me via my personal email, or fill out
-                    the form below!
+                    I am looking for new opportunities and projects to work on.
+                    If you have an idea or project feel free to reach out to me
+                    via my personal email or by filling out the form below.
                 </p>
                 <br />
                 <p>
                     <b>Email: </b>
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    <a href="mailto:utkarshshukla372@gmail.com">
+                        utkarshshukla372@gmail.com
                     </a>
                 </p>
 
@@ -181,7 +172,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                     </label>
                     <input
                         style={styles.formItem}
-                        type="company"
+                        type="text"
                         name="company"
                         placeholder="Company"
                         value={company}
@@ -204,9 +195,9 @@ const Contact: React.FC<ContactProps> = (props) => {
                         <button
                             className="site-button"
                             style={styles.button}
-                            type="submit"
+                            type="button"
                             disabled={!isFormValid || isLoading}
-                            onMouseDown={submitForm}
+                            onClick={submitForm}
                         >
                             {!isLoading ? (
                                 'Send Message'
@@ -216,10 +207,9 @@ const Contact: React.FC<ContactProps> = (props) => {
                         </button>
                         <div style={styles.formInfo}>
                             <p
-                                style={Object.assign(
-                                    {},
-                                    { color: formMessageColor }
-                                )}
+                                style={{
+                                    color: formMessageColor,
+                                }}
                             >
                                 <b>
                                     <sub>
@@ -269,7 +259,6 @@ const styles: StyleSheetCSS = {
     },
     formInfo: {
         textAlign: 'right',
-
         flexDirection: 'column',
         alignItems: 'flex-end',
         paddingLeft: 24,
@@ -294,7 +283,6 @@ const styles: StyleSheetCSS = {
         width: 4,
         height: 4,
         // borderRadius: 1000,
-
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: 8,

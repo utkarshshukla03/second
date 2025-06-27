@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from '../general';
 
 import forhire from '../../assets/pictures/forHireGif.gif';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 export interface HomeProps {}
 
@@ -16,11 +16,13 @@ const Home: React.FC<HomeProps> = (props) => {
     return (
         <div style={styles.page}>
             <div style={styles.header}>
-                <h1 style={styles.name}>Henry Heffernan</h1>
-                <h2>Software Engineer</h2>
+                <h1 style={styles.name}>Utkarsh Shukla</h1>
+                <h2>Full Stack Developer</h2>
             </div>
             <div style={styles.buttons}>
                 <Link containerStyle={styles.link} to="about" text="ABOUT" />
+                <Link containerStyle={styles.link} to ="education" text='EDUCATION'/>
+
                 <Link
                     containerStyle={styles.link}
                     to="experience"

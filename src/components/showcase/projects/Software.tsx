@@ -6,6 +6,9 @@ import computer from '../../../assets/pictures/projects/software/computer.mp4';
 // @ts-ignore
 import scroll from '../../../assets/pictures/projects/software/scroll.mp4';
 import ResumeDownload from '../ResumeDownload';
+import dlab from '../../../assets/pictures/projects/software/dlab.png';
+import ucreate from '../../../assets/pictures/projects/software/ucreate.jpg'
+import progress from '../../../assets/pictures/projects/software/progress.jpg'
 import VideoAsset from '../../general/VideoAsset';
 
 export interface SoftwareProjectsProps {}
@@ -18,156 +21,44 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
             <br />
             <p>
                 Below are some of my favorite software projects I have worked on
-                over the last few years.
+                over the time.
             </p>
             <br />
             <ResumeDownload />
             <br />
             <div className="text-block">
-                <h2>henryheffernan.com</h2>
+                <h2>Dlab</h2>
                 <br />
                 <p>
-                    henryheffernan.com is my portfolio website, and also the
-                    website you are on right now. This project was an absolute
-                    joy to make and challenged me both technically and
-                    creatively. Early in 2022, I knew I wanted to make an
-                    interactive portfolio to aid my job search. I eventually got
-                    the idea for this site around early February and began
-                    development early March. I've been developing it alongside
-                    my last semester at school and if you are reading this, it's
-                    pretty much done!
+                    DLab is a decentralized Web3 platform designed to bridge the gap between organizations needing data annotation and users seeking micro-earning opportunities. The platform enables organizations to post surveys and data labeling tasks, while users complete these to earn Solana-based micro-payments. The system emphasizes secure blockchain transactions, decentralized data storage, and a frictionless user experience, ensuring trust and transparency for all participants.
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={computer} />
-                    <p style={styles.caption}>
-                        <sub>
-                            <b>Figure 1:</b> Blender Scene of the 3D website.
-                            The scene from Blender was baked and exported in a
-                            GLTF format.
-                        </sub>
-                    </p>
-                </div>
+    <img src={dlab} alt="Dlab" style={{ width: '480px', height: 'auto', borderRadius: '12px' }}  />
+    <p style={styles.caption}>
+        <sub>
+            <b>Figure 1:</b> Dlab Logo
+        </sub>
+    </p>
+</div>
                 <p>
-                    Now, a quick technical breakdown of the site. The website is
-                    split into two parts, the 3D site, and the 2D OS site. The
-                    3D site uses Three.js to render the scene and renders the 2D
-                    site inside of it using an iframe. The 2D OS site is a
-                    simple react site that is hosted{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://henryheffernan.vercel.app/"
-                    >
-                        here
-                    </a>{' '}
-                    and works as a standalone web app. The actual rendering of
-                    the 2D site is accomplished using a CSS renderer provided by
-                    Three.js that transforms the html of the 2D site with 3D CSS
-                    transforms to give the illusion of three dimensionality.
-                </p>
-                <br />
-                <h3>Links:</h3>
-                <ul>
+                  <ul><h3>Impact & Facts:</h3>
+                  <li>
+                    <p>Real Incentives: Users receive real-time, trustless payouts for data labeling tasks.</p>
+                  </li>
+                  <li><p>
+                    Scalable Architecture: Modular design supports onboarding multiple organizations and scaling task volume.
+                    </p></li>
+
+                   <li>
+                    <p>
+                        Secure & Transparent: Powered by blockchain for data integrity and transparent micro-transactions.
+                        </p></li> 
                     <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://henryheffernan.com"
-                        >
-                            <p>
-                                <b>[3D Site]</b> - henryheffernan.com
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://henryheffernan.vercel.app/"
-                        >
-                            <p>
-                                <b>[OS Site]</b> - henryheffernan.vercel.app
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/portfolio-website"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - 3D Site Repository
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/portfolio-inner-site"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - OS Site Repository
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-                <p>
-                    I'm skipping over a lot of details in exchange for brevity,
-                    but I do plan on doing a more in depth breakdown for those
-                    interested sometime in the future. To get updates with that
-                    project feel free to follow me on twitter{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://twitter.com/henryheffernan"
-                    >
-                        @henryheffernan
-                    </a>
-                </p>
-            </div>
-            <div className="text-block">
-                <h2>Guntattchment Saga The Sequel</h2>
-                <br />
-                <p>
-                    Guntattchment Saga or GSTS is a game I made with my good
-                    friend Scott Bass back in 2019. The game is a wave based top
-                    down shooter where you progress by building the most
-                    outrageous of weapons through attaching as many attachments
-                    on your weapon as you can. The game ceased development in
-                    2019 because we unfortunately both had packed school
-                    schedules and were unable to find the time to work on it.
-                </p>
-                <br />
-                <div className="captioned-image">
-                    <VideoAsset src={saga} />
-                    <div style={styles.caption}>
                         <p>
-                            <sub>
-                                <b>Figure 2: </b> Guntattchment Saga Gameplay
-                                demo, featuring the main character along with a
-                                few of our grunt and dasher enemies.
-                            </sub>
-                        </p>
-                    </div>
-                </div>
-                <p>
-                    Guntattchment Saga was a really fun project to work on and
-                    had a multitude of challenges. An interesting challenge that
-                    you may not even notice was the rotation of objects such as
-                    the players weapon. Rotating pixel art is a very difficult
-                    thing to do because in the world of pixels you are dealing
-                    with such a little amount of information. Even a single
-                    misplaced pixel can cause a sprite to read in a totally
-                    different and unintended way. To deal with this we developed
-                    an algorithm to prioritize outlines, while rotating the
-                    insides with a simple Nearest Neighbor algorithm. Doing so
-                    resulted in a relatively readable sprite when rotating
-                    sprites. It was a surprisingly difficult challenge as it
-                    intersected both art and programming, but was fun to work on
-                    overall.
+                            Decentralized Storage: Off-chain task data stored securely using Amazon S3, minimizing blockchain bloat.
+                            </p></li>    
+                  </ul>
                 </p>
                 <br />
                 <h3>Links:</h3>
@@ -176,66 +67,56 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            href="https://github.com/scottbass47/gsts"
+                            href="https://github.com/utkarshshukla03/Dlab"
                         >
                             <p>
-                                <b>[GitHub]</b> - Guntattchment Saga The Sequel
-                                Unity Repository
+                                <b>[Github Repository]</b> - dlab
                             </p>
                         </a>
                     </li>
-                    <li>
-                        <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/henryjeff/gsts_assets"
-                        >
-                            <p>
-                                <b>[GitHub]</b> - Guntattchment Saga The Sequel
-                                Assets Repository
-                            </p>
-                        </a>
-                    </li>
+                    
+                    
                 </ul>
                 <p>
-                    Unfortunately, the game currently is not in a releasable
-                    state and so there is no demo available online. If this ever
-                    changes, however, a link to the game will be added here.
+                    This is an ongoing project and code is getting update on github, and couple of week website will be streaming live and helping others.
                 </p>
             </div>
             <div className="text-block">
-                <h2>Skip the Scroll</h2>
+                <h2>UCreate</h2>
                 <br />
                 <p>
-                    While working at Hover, I spent a lot of time on GitHub
-                    issue pages looking for answers and solutions to problems I
-                    had run into. I would always find myself sifting though the
-                    comments trying to find the right answer, which usually had
-                    the most upvotes and positive reactions. With that
-                    information, I decided to create a very simple chrome
-                    extension that would sift through all the comments on the
-                    page, sort them by positive reactions, and then allow you to
-                    traverse them from most positive reactions to least positive
-                    reactions.
+                    UCreate is a powerful no-code website builder that leverages AI-driven tools and modern Web Container
+                     Technology to empower users—regardless of technical background—to effortlessly design, preview, and 
+                     deploy professional-grade websites. With a focus on simplicity and customization, UCreate provides 
+                     an intuitive drag-and-drop interface, smart component suggestions, and live editing capabilities for real-time feedback.
+
+
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <VideoAsset src={scroll} />
-                    <p style={styles.caption}>
-                        <sub>
-                            <b>Figure 3:</b> Skip the Scroll in action, finding
-                            the highest rated comments and scrolling right to
-                            them
-                        </sub>
-                    </p>
-                </div>
+    <img src={ucreate} alt="Ucreate" style={{ width: '320px', height: 'auto', borderRadius: '12px' }} />
+    <p style={styles.caption}>
+        <sub>
+            <b>Figure 1:</b> Dlab Logo
+        </sub>
+    </p>
+</div>
                 <p>
-                    The extension is open source and currently released on the
-                    Chrome web store. Skip the Scroll is obviously not a project
-                    with massive scope, but was fun to make and dive into the
-                    world of browser extensions. I wanted to showcase since it's
-                    a developer tool and I wanna give it some visibility for
-                    those who might find it useful.
+                    <ul>
+                        <h4>Impact</h4>
+                        <li><p>
+                            Reduced the time to build a simple website from hours to under 10 minutes.
+                            </p></li>
+
+                        <li>
+                            <p>
+                              Enabled designers, freelancers, and non-developers to launch polished web pages without writing code.  
+                            </p>
+                            </li>  
+                        <li>
+                            Showcased innovation in the no-code space by combining AI guidance with runtime Web Container execution.
+                            </li>      
+                    </ul>
                 </p>
                 <br />
                 <h3>Links:</h3>
@@ -244,10 +125,71 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            href="https://github.com/henryjeff/skip-the-scroll"
+                            href="https://github.com/utkarshshukla03/ucreate-"
                         >
                             <p>
-                                <b>[GitHub]</b> - Skip the Scroll Repository
+                                <b>[GitHub]</b> - UCreate Repository
+                            </p>
+                        </a>
+                    </li>
+                   
+                </ul>
+                <p>
+                    Unfortunately, the webiste currently is done because of some bugs
+                    but it will be live very soon 
+                </p>
+            </div>
+            <div className="text-block">
+                <h2>Progress</h2>
+                <br />
+                <p>
+                   Progress is a cross-platform mobile application focused on habit management and personal productivity. The app enables users to track habits, visualize activity through interactive heat maps, take short notes tied to specific days, and interact with an AI-powered assistant that provides personalized feedback, motivation, and productivity insights.
+
+Built with Flutter for consistent performance across Android and iOS, Progress combines a seamless user experience with powerful offline storage and intelligent assistance features.
+                </p>
+                <br />
+               <div className="captioned-image">
+    <img src={progress} alt="Progress" style={{ width: '220px', height: 'auto', borderRadius: '12px' }}  />
+    <p style={styles.caption}>
+        <sub>
+            <b>Figure 1:</b> Dlab Logo
+        </sub>
+    </p>
+</div>
+                <p>
+                    <ul><h3>Impacts</h3>
+                    <li>
+                        <p>
+                        Helped users build consistent routines with visual feedback loops and intelligent nudges.    
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                          Provided a unique blend of habit tracking and AI assistance, offering both structure and adaptability.  
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Encouraged user engagement by combining data, visuals, and conversation in a single productivity hub.
+
+                        </p>
+                    </li>
+                    
+                    </ul>
+                </p>
+                <br />
+                <h3>Links:</h3>
+                <ul>
+                    <li>
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://github.com/utkarshshukla03/progress"
+                        >
+                            <p>
+                                <b>[GitHub]</b> - Progress Repository
                             </p>
                         </a>
                     </li>
@@ -255,10 +197,10 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            href="https://chrome.google.com/webstore/detail/skip-the-scroll/mfehannpjmgfagldoilpngeoecdfgmnd"
+                            href="https://progress-umber-sigma.vercel.app/"
                         >
                             <p>
-                                <b>[Chrome Web Store]</b> - Skip the Scroll
+                                <b>[Live]</b> - Progress(WebPage)
                             </p>
                         </a>
                     </li>

@@ -10,233 +10,92 @@ const Experience: React.FC<ExperienceProps> = (props) => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>Hover</h1>
+                        <h1>Google Cloud Archade Externship</h1>
                         <a
                             rel="noreferrer"
                             target="_blank"
                             href={'https://hover.gg/'}
                         >
-                            <h4>www.hover.gg</h4>
+                            {/* <h4>www.hover.gg</h4> */}
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Frontend Engineer</h3>
+                        <h3>Extern | Google Cloud</h3>
                         <b>
-                            <p>Summer 2020 - Fall 2021</p>
+                            <p>July - September 2024 </p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Targeted towards online content creators and streamers
-                    looking to build a brand, Hover is the home of over 150K
-                    users. Written in Typescript using React, React-Native,
-                    Framer, Express, and Redux.
+                    Participated in a highly competitive and immersive cloud development externship program hosted by Google Cloud,
+                     specifically designed to replicate real-world engineering challenges and enterprise-level <br /> problem-solving using cutting-edge cloud technologies.
+
+
                 </p>
                 <br />
                 <ul>
                     <li>
                         <p>
-                            Architected and engineered the vertical scrolling
-                            discover player which, at its daily peak, was
-                            responsible for generating over 600,000 views across
-                            20,000 active users.
+                            Designed, built, and deployed Python-based microservices within a modular architecture that ensured high availability, fault tolerance, and ease of scaling in production-grade cloud environments.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Designed and implemented multiple features to
-                            increase app usability and user experience while
-                            ensuring the quality, maintainability and
-                            scalability of the front end as the user base grew
-                            by over 50,000.
+                            Leveraged key Google Cloud Platform (GCP) services such as Compute Engine for provisioning and managing virtual machines, Cloud Storage for object-based data handling and archival, and BigQuery for <br /> executing complex, high-speed data analytics and queries on large datasets.
+
+
                         </p>
                     </li>
                     <li>
                         <p>
-                            Coordinated major refactors targeted towards app
-                            optimization and performance resulting in a smoother
-                            user experience and accomplished by eliminating
-                            redundant re-renders and API calls by over 50%.
+                            Architected and implemented cloud-native solutions emphasizing optimal performance, horizontal scalability, secure data processing, and cost-efficient infrastructure management using principles of distributed computing.
+
+
                         </p>
                     </li>
                     <li>
                         <p>
-                            Directed and executed an internal migration of 3
-                            individual repositories to a single monorepo,
-                            greatly reducing overhead for developing new
-                            features, fixing bugs, and managing dependencies.
+                           Collaborated in a fast-paced, agile team environment following industry best practices including Git-based version control, sprint planning, code reviews, and CI/CD pipelines to streamline development and deployment workflows.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Rebuilt the website with React and shared mobile app
-                            components allowing users to access a wide variety
-                            of app interactions entirely on the web, resulting
-                            in over 700,000 total site visits.
+                           Gained practical hands-on experience in managing virtual machines, configuring persistent storage, automating deployments, monitoring cloud resources, and executing data-driven insights at scale using SQL and BigQuery's analytics engine.
                         </p>
                     </li>
+                  
                 </ul>
-            </div>
-            <div style={styles.headerContainer}>
-                <div style={styles.header}>
-                    <div style={styles.headerRow}>
-                        <h1>BrACS</h1>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href={'https://bracs.co/'}
-                        >
-                            <h4>www.bracs.co</h4>
-                        </a>
+                <div style={styles.headerRow}>
+                        <h4>Tech Stack:</h4>
                     </div>
-                    <div style={styles.headerRow}>
-                        <h3>Team Lead & Engineer</h3>
-                        <b>
-                            <p>Fall 2021 - Spring 2022</p>
-                        </b>
-                    </div>
-                </div>
+                <div className="text-block">
+                    <ul>
+                        <li>
+                            <p>Programming Language: Python </p>
+                        </li>
+
+                        <li>
+                            <p>Cloud Services: Google Cloud Platform (Compute Engine, Cloud Storage, BigQuery) </p>
+                        </li>
+                        <li>
+                            <p>DevOps Tools: Git, CI/CD pipelines</p>
+                        </li>
+                        <li>
+                            <p>API Design: RESTful APIs</p>
+                        </li>
+
+                        <li>
+                            <p>Practices: Agile methodology, team collaboration, performance optimization, scalability strategies</p>
+                        </li>
+
+                    </ul>
+                    </div>    
             </div>
-            <div className="text-block">
-                <p>
-                    Supervised and developed the front end of bracs.co, a
-                    beautifully simple and effective bracket creation and
-                    management engine. Written in Typescript using React and
-                    deployed using AWS Elastic Beanstalk.
-                </p>
-                <br />
-                <ul>
-                    <li>
-                        <p>
-                            Managed the project and team members by conducting
-                            bi-weekly stand-ups.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Architected bracket view UI using React Flow and
-                            custom bracket data types built from binary trees.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Created conversion algorithms to serialize bracket
-                            tree data to allow for saving in the cloud.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Implemented bracket generation utilities which
-                            employ gray code for proper team seeding and
-                            placement.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div style={styles.headerContainer}>
-                <div style={styles.header}>
-                    <div style={styles.headerRow}>
-                        <h1>K-F/X</h1>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href={'https://kfxnyc.com/'}
-                        >
-                            <h4>www.kfxnyc.com</h4>
-                        </a>
-                    </div>
-                    <div style={styles.headerRow}>
-                        <h3>Special Effects Technician</h3>
-                        <b>
-                            <p>Fall 2019, Summer 2021</p>
-                        </b>
-                    </div>
-                </div>
-            </div>
-            <div className="text-block">
-                <p>
-                    Applied problem solving and technical skills to operate
-                    large equipment such as rain machines, fog machines, small
-                    explosives and general rigging with a professional crew of
-                    50+ people.
-                </p>
-                <br />
-                <h3 style={styles.indent}>Screen Credits:</h3>
-                <ul>
-                    <li style={styles.row}>
-                        <p>• Ray Donovan</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.sho.com/ray-donovan"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                SHOWTIME
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                    <li style={styles.row}>
-                        <p>• Ray Donovan: The Movie</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.sho.com/titles/3508117/ray-donovan-the-movie"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                SHOWTIME
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                    <li style={styles.row}>
-                        <p>• Hightown</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.starz.com/us/en/series/hightown/57463"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                STARZ
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                    <li style={styles.row}>
-                        <p>• Bull</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.cbs.com/shows/bull/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                CBS
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                    <li style={styles.row}>
-                        <p>• At Home with Amy Sedaris</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.trutv.com/shows/at-home-with-amy-sedaris"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                truTV
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                </ul>
-            </div>
+            
+
+
         </div>
     );
 };
@@ -288,6 +147,7 @@ const styles: StyleSheetCSS = {
         display: 'flex',
         justifyContent: 'space-between',
     },
+    
 };
 
 export default Experience;

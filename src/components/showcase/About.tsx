@@ -1,10 +1,11 @@
 import React from 'react';
-import me from '../../assets/pictures/workingAtComputer.jpg';
-import meNow from '../../assets/pictures/currentme.jpg';
+import streak from '../../assets/pictures/streaks.jpg';
+import leetcode from '../../assets/pictures/leecode.jpg';
+
 import { Link } from 'react-router-dom';
 import ResumeDownload from './ResumeDownload';
 
-export interface AboutProps {}
+export interface AboutProps { }
 
 const About: React.FC<AboutProps> = (props) => {
     return (
@@ -12,13 +13,13 @@ const About: React.FC<AboutProps> = (props) => {
         <div className="site-page-content">
             {/* <img src={me} style={styles.topImage} alt="" /> */}
             <h1 style={{ marginLeft: -16 }}>Welcome</h1>
-            <h3>I'm Henry Heffernan</h3>
+            <h3>I'm Utkarsh Shukla</h3>
             <br />
             <div className="text-block">
                 <p>
-                    I'm a software engineer currently working at Vercel! In May
-                    of 2022 I graduated from Rensselaer Polytechnic Institute
-                    with my BS in Computer Science.
+                    Web And App enthusiast with a passion for creating
+                    beautiful, functional, and user-friendly digital experiences.Currently Pursuing Masters Of Computer Applications at
+                    Thapar Institute of Engineering and Technology, Patiala.
                 </p>
                 <br />
                 <p>
@@ -27,8 +28,8 @@ const About: React.FC<AboutProps> = (props) => {
                     building it. If you have any questions or comments, feel
                     free to contact me using{' '}
                     <Link to="/contact">this form</Link> or shoot me an email at{' '}
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    <a href="mailto:utkarshshukla372@gmail.com">
+                        utkarshshukla372@gmail.com
                     </a>
                 </p>
             </div>
@@ -37,53 +38,33 @@ const About: React.FC<AboutProps> = (props) => {
                 <h3>About Me</h3>
                 <br />
                 <p>
-                    From a young age, I have had a curiosity about how things
-                    worked. This naturally led me to become absolutely obsessed
-                    with Lego and I fell in love with building things. In
-                    elementary school, I joined the Lego Robotics team at my
-                    local middle school, which was my first real exposure to
-                    programming. In 2008, my family and I moved across the
-                    country from California to New York, where I attended middle
-                    school, high school, and college.
+                    Hello! I'm someone who's always been drawn to how things work — not just at the surface, but deep within the logic, structure, and systems that drive them. From a young age, I was fascinated by the possibilities technology offered. What began as a curiosity turned into a strong passion, and over time, that passion evolved into a focused career path in software development and innovation. Along the way, I developed a strong foundation in data structures and algorithms, and I’ve made problem-solving a part of my daily routine, consistently practicing on platforms like LeetCode to sharpen my logic and analytical thinking.
+
+
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <img src={me} style={styles.image} alt="" />
+                    <img src={streak} style={styles.image} alt="" />
                     <p>
                         <sub>
-                            <b>Figure 1:</b> A real photo of me developing this
+                            <b>Figure 1:</b> Leetcode heatmap of my coding streaks.
                             website :)
                         </sub>
                     </p>
                 </div>
 
                 <p>
-                    I started programming more seriously in high school,
-                    initially learning how to scrape and interact with websites.
-                    I went on to do a ton of passion projects, many of them with
-                    one of my closest friends,{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://www.linkedin.com/in/scott-bass-189a7919b/"
-                    >
-                        Scott Bass
-                    </a>
-                    . We worked on many projects together, including chat bots,
-                    multiple game projects, apps, and more. One of these
-                    projects is viewable on my{' '}
-                    <Link to="/projects/software">Software Projects</Link> page.
+                    My journey with technology started with small experiments: tweaking websites, automating small tasks,
+                    understanding how apps interact with servers. The more I explored, the more I realized that technology is not just about code — it's about solving problems creatively,
+                    building tools that improve lives, and creating experiences that feel magical to users.
                 </p>
                 <br />
                 <p>
-                    In 2017, I got accepted into Rennselear Polytechnic
-                    Institute to study Computer Science. It was my first choice
-                    and I was absolutely ecstatic to be going to such a great
-                    university. At the end of my sophomore year, I got an
-                    internship working for the startup Hover, primarily focusing
-                    on frontend work. I continued to work at Hover on and off
-                    for about a year and a half, until the start of my senior
-                    year when I decided to focus on other opportunities.
+                    Today, I specialize in full-stack development and product engineering.
+                    I love working across layers — whether it's building robust backend systems using Node.js and MongoDB,
+                    crafting interactive UIs with React or Flutter, or integrating smart AI components using TensorFlow.js or GPT-based models.
+                    I’ve also explored Web3, CI/CD pipelines, and cloud infrastructure, and I enjoy experimenting with tools that push the boundaries of what’s possible.
+                    
                 </p>
                 <br />
                 <br />
@@ -99,47 +80,34 @@ const About: React.FC<AboutProps> = (props) => {
                         <h3>My Hobbies</h3>
                         <br />
                         <p>
-                            Beyond software, I have a lot of hobbies that I
-                            enjoy doing in my free time. The more tangible
-                            hobbies I have are{' '}
-                            <Link to="/projects/music">Music Production</Link>{' '}
-                            and creating{' '}
-                            <Link to="/projects/art">Digital Art</Link>. You can
-                            read more about each of these on their respective
-                            pages under my projects tab. Some other hobbies I
-                            enjoy are working out, cooking, and (unsurprisingly)
-                            playing video games.
+                            Outside of coding real-world applications, I enjoy solving Data Structures and Algorithms (DSA) problems to strengthen my core problem-solving skills. I’ve been consistently practicing on platforms like{' '}
+                            <a href="https://https://leetcode.com/u/utkarshshukla372/.com/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+                            {' '}where I’ve built strong foundations in topics like arrays, trees, graphs, recursion, and dynamic programming. This habit has not only improved my coding speed but also prepared me well for technical interviews.
                         </p>
                         <br />
-                        <p>
-                            In college, I was an active member in the fraternity
-                            Sigma Alpha Epsilon and held multiple positions in
-                            the chapter. I met a lot of amazing people through
-                            my fraternity and thoroughly enjoyed the community.
-                        </p>
+                        
                     </div>
-                    <div style={styles.verticalImage}>
-                        <img src={meNow} style={styles.image} alt="" />
+                    {/* <div style={styles.verticalImage}>
+                        <img src={leetcode} style={styles.image} alt="" />
                         <p>
                             <sub>
                                 <b>Figure 2:</b> Me, April 2022
                             </sub>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
-                <br />
-                <br />
+                
                 <p>
                     Thanks for reading about me! I hope that you enjoy exploring
                     the rest of my portfolio website and everything it has to
                     offer. If you find the easter egg make sure to let me know
-                    on twitter{' '}
+                    on LinkedIn{' '}
                     <a
                         rel="noreferrer"
                         target="_blank"
-                        href="https://twitter.com/henryheffernan"
+                        href="https://www.linkedin.com/in/utkarsh-shukla-7643ab276/"
                     >
-                        @henryheffernan
+                        @UtkarshShukla
                     </a>{' '}
                     Good luck and have fun!
                 </p>
@@ -149,8 +117,8 @@ const About: React.FC<AboutProps> = (props) => {
                     them. You can reach me through the{' '}
                     <Link to="/contact">contact page</Link> or shoot me an email
                     at{' '}
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    <a href="mailto:utkarshshukla372@gmail.com">
+                        utkarshshukla372@gmail.com
                     </a>
                 </p>
             </div>
