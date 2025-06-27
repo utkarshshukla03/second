@@ -59,7 +59,7 @@ const Contact: React.FC<ContactProps> = () => {
         }
         try {
             setIsLoading(true);
-            const res = await fetch('http://localhost:5000/api/contact', {
+            const res = await fetch('https://second-backend1.onrender.com/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
